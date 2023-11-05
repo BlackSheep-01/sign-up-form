@@ -15,7 +15,7 @@ function checkPasswordMatch() {
     const confirmPassword = document.getElementById("user-password-confirm").value;
     
     if (password === confirmPassword) 
-        document.getElementById("user-password").setCustomValidity(""); // Clear custom message
+        document.getElementById("user-password-confirm").setCustomValidity(""); // Clear custom message
     else
         document.getElementById("user-password-confirm").setCustomValidity("Passwords do not match.");
 }
