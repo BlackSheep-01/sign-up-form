@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 Sign-up Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    
+    <div class="imageContainer">
+        <h1 id="brand">Alohamora<sup>™</sup></h1>
+        <img src="signUp.svg" alt="">
+        <p>Sign up today and get exciting offers..!</p>
+    </div>
+
+
+    <div class="formContainer">
+        <h1>Get Started !</h1>
+
+        <form action="" id="registration-form">
+            <div>
+                <label for="first-name"></label>
+                <input type="text" id="first-name" placeholder="&#128100; &nbsp; FIRST NAME *" pattern="^[^0-9]+$" size="30" maxlength="30" title="Please enter letters only" required>
+                <label for="last-name"></label>
+                <input type="text" id="last-name" placeholder="&#128100; &nbsp; LAST NAME *" pattern="^[^0-9]+$" size="30" maxlength="30" title="Please enter letters only" required>
+            </div>
+            <div>
+                <label for="email"></label>
+                <input type="email" id="email" placeholder="&#128231; &nbsp; E-MAIL *" size="30" maxlength="30" required>
+                <label for="phone"></label>
+                <input type="tel" id="phone" placeholder="&#128222; &nbsp; PHONE *" size="30" maxlength="10" pattern="^[0-9]{10}$" title="Please enter a 10 digit mobile number" required>
+            </div>
+            <div>
+                <label for="user-password"></label>
+                <input type="password" id="user-password" placeholder="&#128274; &nbsp; PASSWORD *" maxlength="30" pattern=".{6,}" title="Password must be at least 6 characters" required>
+                <label for="user-password-confirm"></label>
+                <input type="password" id="user-password-confirm" placeholder="&#128274; &nbsp; CONFIRM PASSWORD *" maxlength="30" pattern=".{6,}" title="Password must be at least 6 characters" oninput="validateForm()" required>
+            </div>
+            <div class="submit">
+                <button type="submit">Create Account</button>
+                <p>Already have an account ? <a href="#">LOG IN</a></p>   
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

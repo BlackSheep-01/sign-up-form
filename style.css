@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dusky-green: rgb(6, 170, 94);
+    --opac-white: rgba(255, 255, 255, .8);
+    --dark: #1d2b3a;
+    --light-grey: rgb(105, 105, 105);
+}
+body{
+    display: flex;
+}
+
+
+
+.imageContainer{
+    width: 40%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dusky-green);
+    padding: 20px;
+}
+#brand{
+    color: var(--dark);
+    font-family: 'Orbitron', sans-serif;
+}
+h1{
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+.imageContainer > p{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+
+
+.formContainer{
+    width: 60%;
+    min-height: 100vh;
+    background-color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    margin-top: 40px;
+}
+form div{
+    display: flex;
+    justify-content: space-around;
+}
+
+input{
+    width: 35%;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    color: white;
+    background-color: var(--dark);
+    border-bottom: 1.3px solid black;
+    font-family: 'Roboto Slab', serif;
+}
+input:focus{
+    border: 1px solid var(--light-grey);
+    border-radius: 10px;
+}
+input:valid{
+    border: 1px solid green;
+    background-color: rgba(115, 220, 115, 0.1);
+    border-radius: 10px;
+}
+/*when input invalid AND not currenty being used AND contains no placeholder(i.e. has some content)*/
+input:invalid:not(:focus):not(:placeholder-shown){ 
+    border: 1px solid #ee2828;
+    border-radius: 10px;
+    background-color: rgba(232, 154, 154, 0.1);
+}
+
+form label{
+    position: absolute; /*hide labels*/
+}
+
+
+
+div.submit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: slategrey;
+}
+button{
+    height: 40px;
+    width: 190px;
+    background-color: var(--dusky-green);
+    color: var(--opac-white);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 4px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s, transform 0.3s;
+    transition: all 0.4s ease-in-out; 
+}
+button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+    color: var(--dark);
+}
+a{
+    text-decoration: none;
+    color: var(--dusky-green);
+}
+
+
+
+
